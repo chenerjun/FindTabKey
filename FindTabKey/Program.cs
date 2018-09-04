@@ -37,7 +37,7 @@ namespace FindTabKey
                 {
                     char[] subchars = line.ToCharArray();
                     //int errorchar = line.IndexOf(errorletter);
-                    if (subchars[0] == '\t')
+                    if ((subchars[0] == '\t') || (!char.IsDigit(subchars[0])))
                     {
                         Console.WriteLine(" Find TAB at : "+i);  
                         log = "   Row#: " + i + " ;   ";
